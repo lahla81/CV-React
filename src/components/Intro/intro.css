@@ -1,0 +1,104 @@
+
+#intro{
+    background: linear-gradient(to bottom,#182153 , #040f14);
+    height: auto;
+  }
+  #header {
+    background-image: url(./bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    min-height: 100%; 
+  }
+  .overlay {
+    background: rgba(13, 15, 19, 0.4);
+    padding-top: 180px;
+    min-height: 100%; 
+  }
+  .half {
+    padding-left: 0;
+    padding-right: 0; 
+  }
+  .personal-info {
+    background-color: white;
+    height: 100%;
+    padding: 60px;
+    opacity: .85; 
+  }
+  @media (max-width: 767px) {
+    .personal-info {
+      padding: 40px; 
+    } 
+  }
+  @media (max-width: 992px) and (min-width: 768px){
+    .personal-info {
+      padding: 20px; 
+    }
+  }
+  .intro-title h2 {
+    font-size: 30px;
+    line-height: 45px;
+    margin: 0; 
+  }
+  .intro-title h5 {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    margin-bottom: 20px; 
+  }
+  .sub-title {
+    font-size: 16px;
+    font-weight: bold; 
+  }
+  p.top-adress {
+    margin-bottom: 0; 
+  }
+  
+  .photo {
+    background-color: white;
+    height: 100%;
+    opacity: 0.85;
+  }
+  .photo img {
+    width: 100%;
+    height: 100%;
+  }
+  .intro-social {
+    position: relative;
+    z-index: 0;
+    background:transparent;
+  }
+  .intro-social-icons {
+    position: absolute;
+    line-height: 60px;
+    width: 100%;
+    background-color: #182153;
+  }
+  .social {
+    position: relative;
+    z-index: 10; 
+  }
+  .social-icons {
+    position: absolute;
+    line-height: 75px;
+    width: 100%;
+    background-color: #182153; 
+  }
+  .social-icons ul,
+  .intro-social-icons ul {
+    padding: 0;
+    margin: 0; 
+  }
+  .social-link {
+    color: white;
+    padding: 15px;
+  }
+  .social-link i.icon {
+    font-size: 26px; 
+  }
+  .social-link:hover, 
+  .social-link:active, 
+  .social-link:focus {
+    color: #aeb4d4;
+    text-decoration: none;
+  }
+  

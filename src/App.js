@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React,{Component} from 'react';
+import './assets/css/animate.css';
+import './assets/css/style.css';
+import './assets/webfonts/style.css';
+import ParticlesBg from './components/Particles/ParticlesBg';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Navbar from './components/Navbar/Navbar';
+import Intro from './components/Intro/Intro';
+import Experiance from './components/Experiance/Experiance';
+import Education from './components/Education/Education';
+import Certificates from './components/Certificates/Certificates';
+import Projects from './components/Projects/Projects';
+
+class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      input: '',
+    }
+  }
+
+  onDevClick = () => {
+    console.log("click");
+  }
+  onOhtlClick = () => {
+    console.log("OHTLclick");
+  }
+  render(){
+    return (
+      <div className="container-fluid">
+        <ParticlesBg /> 
+        <Intro onDevClick={this.onDevClick} onOhtlClick={this.onOhtlClick}/>
+        <Navbar />
+        {/* <Intro /> */}
+        <Experiance />
+        <Education />
+        <Certificates />
+        <Projects />
+      </div>
+    )
+  }
 }
 
 export default App;

@@ -1,0 +1,45 @@
+#certificates {
+    background: radial-gradient(#aeb4d4, #182153);
+    padding-top: 40px;
+    padding-bottom: 100px; 
+}
+.carousel-inner {
+    margin-top: 40px; 
+}
+.carousel-item h1 {
+    font-size: 32px;
+    line-height: 45px;
+    font-weight: bold;
+    margin-bottom: 30px; 
+}
+.carousel-item h3 {
+    font-size: 28px;
+    line-height: 38px;
+    margin-bottom: 20px; 
+}
+.carousel-item h5 {
+    font-size: 22px;
+    line-height: 32px;
+    margin-bottom: 20px; 
+}
+.carousel-item p {
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: bold; 
+}
+#carouselExampleIndicators ol {
+    bottom: -35px; 
+}
+#carouselExampleIndicators ol li {
+    height: 10px;
+    width: 10px;
+    margin-left: 5px;
+    margin-right: 5px; 
+}
+#carouselExampleIndicators ol li:hover, 
+#carouselExampleIndicators ol li:active, 
+#carouselExampleIndicators ol li:focus {
+    background-color: #182153;
+    cursor: pointer; 
+}
+  
