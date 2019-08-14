@@ -2,11 +2,9 @@ import React from 'react';
 import NavTitlesList from './NavTitlesList';
 import {titles} from './Titles';
 
-function NavMenu() {
+function NavMenu({onRouteChange}) {
   return (
-    <ul className="navbar-nav nav-pills">
-        <NavTitlesList titles={ titles }/>
-    </ul>
+        <NavTitlesList onRouteChange={onRouteChange} titles={ titles }/>
     )
   }
   export default NavMenu

@@ -1,0 +1,60 @@
+
+/* Markup */
+
+.content {
+    position: fixed;
+    width: 300px;
+    left: 50%;
+    bottom: 0;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+  .content p {
+    margin: 0 0 5px;
+  }
+  
+  /* Arrow & Hover Animation */
+  #more-arrows {
+    width: 75px;
+    height: 65px;
+    cursor: pointer;
+  }
+  #more-arrows:hover polygon {
+    fill: #182153;
+    transition: all 0.2s ease-out;
+  }
+  #more-arrows:hover polygon.arrow-bottom {
+    -webkit-transform: translateY(-18px);
+            transform: translateY(-18px);
+  }
+  #more-arrows:hover polygon.arrow-top {
+    -webkit-transform: translateY(18px);
+            transform: translateY(18px);
+  }
+  
+  polygon {
+    fill: #182153;
+    transition: all 0.2s ease-out;
+  }
+  polygon.arrow-middle {
+    opacity: 0.75;
+  }
+  polygon.arrow-top {
+    opacity: 0.5;
+  }
+  .up-btn{
+    position: fixed;
+    left: 5%;
+    bottom: 5%;
+    padding: 0;
+    margin: 0;
+  }
+  .up-btn:hover,
+  .up-btn:focus{
+    bottom: 6%;
+    transition: 0.5s all ease-in;
+    box-shadow: none;
+  }
+  .icon-circle-up{
+    font-size: 30px;
+  }

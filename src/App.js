@@ -4,9 +4,9 @@ import './assets/css/style.css';
 import './assets/webfonts/style.css';
 import ParticlesBg from './components/Particles/ParticlesBg';
 
-import Navbar from './components/Navbar/Navbar';
+// import Navbar from './components/Navbar/Navbar';
 import Intro from './components/Intro/Intro';
-import Experiance from './components/Experiance/Experiance';
+import Experience from './components/Experience/Experience';
 import Education from './components/Education/Education';
 import Certificates from './components/Certificates/Certificates';
 import Projects from './components/Projects/Projects';
@@ -15,27 +15,39 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      input: '',
+      route: 'Intro'
     }
   }
 
-  onDevClick = () => {
-    console.log("click");
-  }
-  onOhtlClick = () => {
-    console.log("OHTLclick");
+  onRouteChange = (route) => {
+    this.setState({route: route});
   }
   render(){
+    const { route } = this.state;
     return (
       <div className="container-fluid">
-        <ParticlesBg /> 
-        <Intro onDevClick={this.onDevClick} onOhtlClick={this.onOhtlClick}/>
-        <Navbar />
-        {/* <Intro /> */}
-        <Experiance />
-        <Education />
-        <Certificates />
-        <Projects />
+        <ParticlesBg />
+        {/* <Navbar onRouteChange={this.onRouteChange}/> */}
+        {
+          route === 'Intro'
+          ?<Intro onRouteChange={this.onRouteChange} />
+          :(route === 'ohtl')
+          ?<Experience onRouteChange={this.onRouteChange} />
+          :(route === 'Education')
+          ?<Education onRouteChange={this.onRouteChange} />
+          :(route === 'Certificates')
+          ?<Certificates onRouteChange={this.onRouteChange} />
+          :(route === 'Projects')
+          ?<Projects onRouteChange={this.onRouteChange} />
+          :(route === 'up')
+          ?<Intro onRouteChange={this.onRouteChange} />
+          :<Intro />
+        }
+        <button 
+          onClick={() => this.onRouteChange('up')}
+          className="up-btn btn bg-transparent">
+          <i className="icon icon-circle-up"></i>
+        </button>
       </div>
     )
   }

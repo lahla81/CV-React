@@ -1,5 +1,6 @@
 import React from 'react';
 import Particles from 'react-particles-js';
+import './particles.css';
 
 const ParticlesBg = () => {
     return (
@@ -7,10 +8,10 @@ const ParticlesBg = () => {
             params={{
                 particles: {
                     number: {
-                        value:40,
+                        value:30,
                         density:{
                             enable: true,
-                            value_area:130,
+                            value_area:150,
                         }
                     }
                 }

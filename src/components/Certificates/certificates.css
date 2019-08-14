@@ -1,7 +1,8 @@
 #certificates {
     background: radial-gradient(#aeb4d4, #182153);
     padding-top: 40px;
-    padding-bottom: 100px; 
+    padding-bottom: 100px;
+    min-height: 100vh;
 }
 .carousel-inner {
     margin-top: 40px; 
@@ -27,18 +28,53 @@
     line-height: 25px;
     font-weight: bold; 
 }
+@media (max-width: 767.5px){
+    .carousel-item h1{
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 20px; 
+    }
+    .carousel-item h3 {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 15px; 
+    }
+    .carousel-item h5 {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 10px; 
+    }
+    .carousel-item p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+@media (max-width: 567.5px){
+    .carousel-item h1{
+        font-size: 20px;
+    }
+    .carousel-item h3 {
+        font-size: 16px;
+    }
+    .carousel-item h5 {
+        font-size: 14px;
+    }
+    .carousel-item p {
+        font-size: 12px;
+    }
+}
 #carouselExampleIndicators ol {
     bottom: -35px; 
 }
-#carouselExampleIndicators ol li {
+li.indicator {
     height: 10px;
     width: 10px;
     margin-left: 5px;
     margin-right: 5px; 
 }
-#carouselExampleIndicators ol li:hover, 
-#carouselExampleIndicators ol li:active, 
-#carouselExampleIndicators ol li:focus {
+li.indicator:hover, 
+li.indicator:active, 
+li.indicator:focus {
     background-color: #182153;
     cursor: pointer; 
 }

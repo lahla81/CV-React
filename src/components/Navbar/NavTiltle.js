@@ -1,10 +1,10 @@
 import React from 'react';
 
-function NavTitle({id, name, href}) {
+function NavTitle({onRouteChange, name, href}) {
 
   return (
-    <li className="nav-item" id={id}>
-        <a className="nav-link scroll text-left" href={`#${href}`}>{name}</a>
+    <li className="nav-item">
+        <button onClick={() => onRouteChange(`${href}`)} className="nav-link btn c-btn m-1 text-left">{name}</button>
     </li>
     )
   }

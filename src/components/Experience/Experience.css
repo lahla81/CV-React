@@ -1,28 +1,33 @@
-#experiance {
-  padding-top: 40px;
-  padding-bottom: 60px; 
+#experience {
+  background: radial-gradient(#aeb4d4, #182153);
+  padding-top: 20px;
+  padding-bottom: 100px; 
+  min-height: 100vh;
 }
-.experiance-title h2:after {
+.trans{
+  transition: 0.5s all ease-in;
+}
+.experience-title h2:after {
   height: 550%;
   background-color: #aeb4d4; 
 }
 @media (max-width: 1199.5px) and (min-width: 992px) {
-  .experiance-title h2:after {
+  .experience-title h2:after {
     height: 660%; 
   } 
 }
 @media (max-width: 992px) and (min-width: 768px) {
-  .experiance-title h2:after {
+  .experience-title h2:after {
     height: 770%; 
   } 
 }
 @media (max-width: 768px) and (min-width: 576px) {
-  .experiance-title h2:after {
+  .experience-title h2:after {
     height: 1050%; 
   } 
 }
 @media (max-width: 576px) {
-  .experiance-title h2:after {
+  .experience-title h2:after {
     display: none; 
   } 
 }

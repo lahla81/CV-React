@@ -1,9 +1,9 @@
 import React from 'react';
 import NavTitle from './NavTiltle';
 
-function NavTitlesList({ titles }) {
+function NavTitlesList({ titles, onRouteChange }) {
   return (
-    <ul className="navbar-nav nav-pills">
+    <ul className="navbar-nav nav-pills p-0">
         {
             titles.map(nav => {
                 return (
@@ -12,6 +12,7 @@ function NavTitlesList({ titles }) {
                             id={nav.id} 
                             name={nav.name} 
                             href={nav.href}
+                            onRouteChange = {onRouteChange}
                         />
                     )
             })
