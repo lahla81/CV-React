@@ -23,9 +23,9 @@ $(document).ready(function(){
 
     new WOW().init();
 
-    // $(".navbar-nav li a").click(function(){
-    //     $(".navbar-collapse").collapse("hide")
-    // }),
+    $(".nav-link").click(function(){
+        $(".navbar-collapse").collapse("hide")
+    }),
 
     $(".project").hover(function(){
         $(this).find(".project-overlay").slideToggle(),

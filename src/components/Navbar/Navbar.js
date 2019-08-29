@@ -3,13 +3,14 @@ import NavMenu from './NavMenu';
 import './navbar.css';
 
 function Navbar({onRouteChange}) {
+    console.log('Navbar')
     return (
         <div className="row">
-            <nav id="navBar" className="navbar navbar-nav navbar-expand-lg fixed-top">
+            <nav id="navBar" className="navbar w-100 trans navbar-nav navbar-expand-lg">
                 <div className="container navagation">
-                    <a className="navbar-brand h1 scroll" href="/">
+                    <button className="btn bg-transparent navbar-brand h1" onClick={() => onRouteChange('Intro')}>
                         Mohamed Lahla
-                    </a>
+                    </button>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                         <i className="icon-menu icon"></i>                        
                     </button>

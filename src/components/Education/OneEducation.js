@@ -3,7 +3,7 @@ import React from 'react';
 function OneEducation({id, duration, degree, title, school, specialty, Grade, project, projectGrade}) {
   return (
     <div className="row">
-        <div className="col-sm-6 degree dot">
+        <div className="col-sm-6 degree dot text-sm-right">
             <h4>{duration}</h4>
             <h5>{degree}</h5>
         </div>

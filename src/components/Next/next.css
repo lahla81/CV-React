@@ -42,19 +42,4 @@
   polygon.arrow-top {
     opacity: 0.5;
   }
-  .up-btn{
-    position: fixed;
-    left: 5%;
-    bottom: 5%;
-    padding: 0;
-    margin: 0;
-  }
-  .up-btn:hover,
-  .up-btn:focus{
-    bottom: 6%;
-    transition: 0.5s all ease-in;
-    box-shadow: none;
-  }
-  .icon-circle-up{
-    font-size: 30px;
-  }
+  

@@ -3,6 +3,7 @@ import Particles from 'react-particles-js';
 import './particles.css';
 
 const ParticlesBg = () => {
+    console.log('ParticlesBg')
     return (
         <Particles  className="particles w-100"
             params={{

@@ -10,12 +10,12 @@ function Intro({onRouteChange}) {
                     <div className="intro-overlay mx-sm-5">
                         <div className="row header">
                             <div className="col-lg-6 half">
-                                <div className="photo rounded-lg">
-                                    <img className="rounded-lg bg-secondary p-3" src={face} alt=""/>
+                                <div className="photo">
+                                    <img className="bg-secondary p-3" src={face} alt=""/>
                                 </div>
                             </div>
                             <div className="col-lg-6 half text-left">
-                                <div className="personal-info rounded-lg">
+                                <div className="personal-info">
                                     <div className="intro-title">
                                         <h2 className="text-center text-primary"><strong>Hello!</strong> I'm Mohamed Lahla</h2>
                                         <h5>I am delighted for your kind visit to my private page, 

@@ -2,32 +2,32 @@
 export const titles = [
     {
         id:1,
-        name: 'EXPERIANCE',
-        href: 'experiance'
+        name: 'EXPERIENCE',
+        href: 'Experience'
     },
     {
         id:2,
         name: 'EDUCATION',
-        href: 'education'
+        href: 'Education'
     },
     {
         id:3,
         name: 'CERTIFICATES',
-        href: 'certificates'
+        href: 'Certificates'
     },
     {
         id:4,
         name: 'PROJECTS',
-        href: 'projects'
+        href: 'Projects'
     },
     {
         id:5,
         name: 'SKILLS',
-        href: 'skills'
+        href: 'Skills'
     },
     {
         id:6,
         name: 'CONTACT',
-        href: 'contact'
+        href: 'Contact'
     },
 ]

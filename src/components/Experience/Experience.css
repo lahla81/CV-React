@@ -1,11 +1,5 @@
 #experience {
   background: radial-gradient(#aeb4d4, #182153);
-  padding-top: 20px;
-  padding-bottom: 100px; 
-  min-height: 100vh;
-}
-.trans{
-  transition: 0.5s all ease-in;
 }
 .experience-title h2:after {
   height: 550%;

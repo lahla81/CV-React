@@ -1,6 +1,6 @@
 import React from 'react';
 
-function OneExperience({id, duration, jobTitle, company, role1, role2, role3}) {
+function OneExperience({duration, jobTitle, company, role1, role2, role3}) {
   return (
     <div className="row">
         <div className="col-sm-6 dot">

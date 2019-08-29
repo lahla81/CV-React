@@ -24,6 +24,7 @@ class Projects extends Component {
   }
   
   render(){
+    console.log('projects')
     const filteredProjects = this.state.projects.filter(project => {
       return project.category.includes(this.state.category)
     })

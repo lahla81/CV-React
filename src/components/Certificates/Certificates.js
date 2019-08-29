@@ -3,7 +3,7 @@ import './certificates.css';
 import AllCertificate from './AllCertificate';
 import AllIndicators from './AllIndicators';
 import {CertificateArray} from './CertificateArray';
-import Next from '../Next/Next';
+// import Next from '../Next/Next';
 
 function Certificates({onRouteChange}) {
   return (
@@ -27,7 +27,7 @@ function Certificates({onRouteChange}) {
                 </a>
             </div>
         </div>
-        <Next onRouteChange={onRouteChange} next='Projects' />
+        {/* <Next onRouteChange={onRouteChange} next='Projects' /> */}
     </section>
   );
 }

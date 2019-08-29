@@ -4,7 +4,9 @@ body {
 .container-fluid {
   padding: 0; 
 }
-
+section{
+  min-height: 100vh;
+}
 .row {
   margin-left: 0;
   margin-right: 0; }
@@ -14,6 +16,9 @@ body {
 .container {
   padding-left: 0;
   padding-right: 0; 
+}
+.trans{
+  transition: 0.5s all ease-in;
 }
 .title h2,
 .title h2,
@@ -93,17 +98,20 @@ body {
   padding-top: 180px;
   padding-bottom: 120px;
   background-color: #aeb4d4;
-  position: relative; }
-  #introduce .title h1 {
-    font-size: 32px;
-    margin-bottom: 40px; }
-  #introduce p.int-body {
-    font-size: 18px;
-    line-height: 35px;
-    width: 65%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: justify; }
+  position: relative; 
+}
+#introduce .title h1 {
+  font-size: 32px;
+  margin-bottom: 40px; 
+}
+#introduce p.int-body {
+  font-size: 18px;
+  line-height: 35px;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify; 
+}
 
 
 #skills {
@@ -142,4 +150,20 @@ body {
 }
 .i-btn{
   box-shadow: 0 0 0 1px #aeb4d4;
+}
+.up-btn{
+  position: fixed;
+  left: 5%;
+  bottom: 5%;
+  padding: 0;
+  margin: 0;
+}
+.up-btn:hover,
+.up-btn:focus{
+  bottom: 6%;
+  transition: 0.5s all ease-in;
+  box-shadow: none;
+}
+.icon-circle-up{
+  font-size: 30px;
 }
