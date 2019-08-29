@@ -3,7 +3,6 @@ import NavMenu from './NavMenu';
 import './navbar.css';
 
 function Navbar({onRouteChange}) {
-    console.log('Navbar')
     return (
         <div className="row">
             <nav id="navBar" className="navbar w-100 trans navbar-nav navbar-expand-lg">

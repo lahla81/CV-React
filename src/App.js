@@ -1,4 +1,5 @@
-import React,{Component} from 'react';
+import React,{ Component } from 'react';
+import { connect } from 'react-redux';
 import './assets/css/animate.css';
 import './assets/css/style.css';
 import './assets/webfonts/style.css';
@@ -13,45 +14,56 @@ import AsyncComponent from './components/AsyncComponent/AsyncComponent';
 // import Certificates from './components/Certificates/Certificates';
 // import Projects from './components/Projects/Projects';
 
+import { setRoute } from './components/actions';
+
+const mapStateToProps = state => {
+  return {
+    route: state.route
+  }
+}
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onRouteChange: (event) => dispatch(setRoute(event))
+  }
+}
 class App extends Component {
   constructor(){
     super();
     this.state = {
-      route: 'Intro',
       component: null
     }
   }
 
-  onRouteChange = (route) => {
-    // no code splitting
-    this.setState({route: route});
-    // with Code splitting:
-    // route === 'Intro'
-    // ?this.setState({ route: route })
-    // :(route === 'ohtl')
-    // ?import ('./components/Experience/Experience').then((Experience) => {
-    //   this.setState({ route: route, component:Experience.default})
-    // })
-    // :(route === 'Experience')
-    // ?import ('./components/Experience/Experience').then((Experience) => {
-    //   this.setState({ route: route, component:Experience.default})
-    // })
-    // :(route === 'Education')
-    // ?import ('./components/Education/Education').then((Education) => {
-    //   this.setState({ route: route, component:Education.default})
-    // })
-    // :(route === 'Certificates')
-    // ?import ('./components/Certificates/Certificates').then((Certificates) => {
-    //   this.setState({ route: route, component:Certificates.default})
-    // })
-    // :(route === 'Projects')
-    // ?import ('./components/Projects/Projects').then((Projects) => {
-    //   this.setState({ route: route, component:Projects.default})
-    // })
-    // :this.setState({ route: route, component:Intro.default})
-  }
+  // onRouteChange = (route) => {
+  //   // no code splitting
+  //   this.setState({route: route});
+  //   // with Code splitting:
+  //   // route === 'Intro'
+  //   // ?this.setState({ route: route })
+  //   // :(route === 'ohtl')
+  //   // ?import ('./components/Experience/Experience').then((Experience) => {
+  //   //   this.setState({ route: route, component:Experience.default})
+  //   // })
+  //   // :(route === 'Experience')
+  //   // ?import ('./components/Experience/Experience').then((Experience) => {
+  //   //   this.setState({ route: route, component:Experience.default})
+  //   // })
+  //   // :(route === 'Education')
+  //   // ?import ('./components/Education/Education').then((Education) => {
+  //   //   this.setState({ route: route, component:Education.default})
+  //   // })
+  //   // :(route === 'Certificates')
+  //   // ?import ('./components/Certificates/Certificates').then((Certificates) => {
+  //   //   this.setState({ route: route, component:Certificates.default})
+  //   // })
+  //   // :(route === 'Projects')
+  //   // ?import ('./components/Projects/Projects').then((Projects) => {
+  //   //   this.setState({ route: route, component:Projects.default})
+  //   // })
+  //   // :this.setState({ route: route, component:Intro.default})
+  // }
   render(){
-    const { route } = this.state;
+    const { route, onRouteChange } = this.props;
     const AsyncExperience = AsyncComponent(() => import('./components/Experience/Experience'));
     const AsyncEducation = AsyncComponent(() => import('./components/Education/Education'));
     const AsyncCertificates = AsyncComponent(() => import('./components/Certificates/Certificates'));
@@ -59,18 +71,18 @@ class App extends Component {
     return (
       <div className="container-fluid">
         <ParticlesBg />
-        <Navbar onRouteChange={this.onRouteChange}/>
+        <Navbar onRouteChange={onRouteChange}/>
         {
           route === 'Intro'
-          ?<Intro onRouteChange={this.onRouteChange} />
+          ?<Intro onRouteChange={onRouteChange} />
           :(route === 'ohtl' || route === 'Experience')
-          ?<AsyncExperience onRouteChange={this.onRouteChange} />
+          ?<AsyncExperience onRouteChange={onRouteChange} />
           :(route === 'Education')
-          ?<AsyncEducation onRouteChange={this.onRouteChange} />
+          ?<AsyncEducation onRouteChange={onRouteChange} />
           :(route === 'Certificates')
-          ?<AsyncCertificates onRouteChange={this.onRouteChange} />
+          ?<AsyncCertificates onRouteChange={onRouteChange} />
           :(route === 'Projects')
-          ?<AsyncProjects onRouteChange={this.onRouteChange} />
+          ?<AsyncProjects onRouteChange={onRouteChange} />
           : null
         }
         {/* {
@@ -94,7 +106,7 @@ class App extends Component {
           :<this.state.component onRouteChange={this.onRouteChange} />
         } */}
         <button 
-          onClick={() => this.onRouteChange('Intro')}
+          onClick={() => onRouteChange('Intro')}
           className="up-btn btn bg-transparent">
           <i className="icon icon-circle-up"></i>
         </button>
@@ -103,4 +115,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect(mapStateToProps, mapDispatchToProps)(App);

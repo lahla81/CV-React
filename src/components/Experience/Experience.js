@@ -5,7 +5,6 @@ import {ExperienceArray} from './ExperienceArray';
 // import Next from '../Next/Next';
 
 function Experience({onRouteChange}) {
-  console.log('Experience')
   return (
     <div>
       <section id="experience">
