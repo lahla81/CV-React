@@ -9,7 +9,8 @@ section{
 }
 .row {
   margin-left: 0;
-  margin-right: 0; }
+  margin-right: 0; 
+}
 .dark-blue {
   color : #182153;
 }
@@ -113,27 +114,11 @@ section{
   text-align: justify; 
 }
 
-
 #skills {
   padding-top: 40px;
   padding-bottom: 60px; 
 }
-#skills .title h2 {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  color: #182153;
-  position: relative; 
-}
-#skills .title h2:before {
-  width: 100px;
-  height: 3px;
-  top: 100px;
-  background-color: #182153;
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%); 
-}
+
 .c-btn {
   position: relative;
   z-index: 1;

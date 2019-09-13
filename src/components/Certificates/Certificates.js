@@ -3,14 +3,12 @@ import './certificates.css';
 import AllCertificate from './AllCertificate';
 import AllIndicators from './AllIndicators';
 import {CertificateArray} from './CertificateArray';
-// import Next from '../Next/Next';
+import SecHeaders from '../SecHeaders/SecHeaders';
 
 function Certificates({onRouteChange}) {
   return (
     <section id="certificates">
-        <div className="certificates-title title text-center">
-            <h2>CERTIFICATES</h2>
-        </div>
+        <SecHeaders name={'CERTIFICATES'}/>
         <div className="container">
             <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
                 <AllIndicators CertificateArray={CertificateArray} />

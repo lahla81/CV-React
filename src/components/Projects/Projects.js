@@ -1,40 +1,48 @@
 import React,{Component} from 'react';
+import { connect } from 'react-redux';
 import './projects.css';
 import AllProjects from './AllProjects';
-import {projectsArray} from './ProjectsArray';
 import ProjectsBtn from './ProjectsBtn';
+import { projectsArray } from './ProjectsArray';
+import SecHeaders from '../SecHeaders/SecHeaders';
+import { setProjects } from '../actions';
+
+const mapStateToProps = state => {
+  return {
+    category: state.projectsChange.category
+  }
+}
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onProjectsChange: (event) => dispatch(setProjects(event))
+  }
+}
 
 class Projects extends Component {
   constructor(){
     super();
     this.state = {
-      projects: projectsArray,
-      category: ''
+      projects: [],
     }
   }
-  onAllClick = () => {
-    this.setState({ category: '' })
+
+  componentDidMount(){
+    this.setState({ projects: projectsArray })
   }
-    
-  onFiberClick = () => {
-    this.setState({ category: 'Fiber Optics' })
-  }
-  OnOhtlProjectClick = () => {
-    this.setState({ category: 'OHTL' })
-  }
-  
+
   render(){
+    console.log('Projects')
+    const { category , onProjectsChange } = this.props;
     const filteredProjects = this.state.projects.filter(project => {
-      return project.category.includes(this.state.category)
+      return project.category.includes(category)
     })
+    
     return (
       <section id="projects">
-        <div className="title text-center">
-            <h2>PROJECTS</h2>
-        </div>
+        <SecHeaders name={'PROJECTS'}/>
         <div className="container text-center">
             <div className="gallery">
-                <ProjectsBtn onAllClick={this.onAllClick} OnOhtlProjectClick={this.OnOhtlProjectClick} onFiberClick={this.onFiberClick}/>
+                <ProjectsBtn onProjectsChange = {onProjectsChange}/>
                 <AllProjects projectsArray={filteredProjects} />            
             </div>
         </div>
@@ -44,4 +52,4 @@ class Projects extends Component {
   
 }
 
-export default Projects;
+export default connect(mapStateToProps,mapDispatchToProps)(Projects);

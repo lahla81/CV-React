@@ -21,7 +21,7 @@ $(document).ready(function(){
     //     prevScrollpos = currentScrollPos;
     // }
 
-    new WOW().init();
+    // new WOW().init();
 
     $(".nav-link").click(function(){
         $(".navbar-collapse").collapse("hide")

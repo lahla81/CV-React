@@ -1,21 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Experience.css';
 import AllExperience from './AllExperience';
 import {ExperienceArray} from './ExperienceArray';
-// import Next from '../Next/Next';
+import SecHeaders from '../SecHeaders/SecHeaders';
 
-function Experience({onRouteChange}) {
-  return (
-    <div>
-      <section id="experience">
-          <div className="experience-title d-title title text-center">
-              <h2 className="">EXPERIENCE</h2>
-          </div>
-          <AllExperience ExperienceArray = {ExperienceArray} onRouteChange={onRouteChange} />
-          {/* <Next onRouteChange={onRouteChange} next='Education' /> */}
-      </section>
-    </div>
-  );
+class Experience extends Component{
+  render(){
+    const onRouteChange = this.props
+    console.log('Experience')
+    return (
+      <div>
+        <section id="experience">
+            <SecHeaders name={'EXPERIENCE'}/>
+            <AllExperience ExperienceArray = {ExperienceArray} onRouteChange={onRouteChange} />
+        </section>
+      </div>
+    );
+  }
 }
 
 export default Experience;
