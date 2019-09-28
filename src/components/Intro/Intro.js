@@ -3,6 +3,7 @@ import face from '../Intro/face1.jpg';
 import './intro.css';
 
 function Intro({onRouteChange}) {
+    console.log('Intro');
     return (
         <div id="intro">
             <header>

@@ -9,7 +9,7 @@ class ParticlesBg extends Component {
     }
 
     render(){
-        console.log('particles')
+        console.log('Particles')
         return (
             <Particles  className="particles w-100"
                 params={{

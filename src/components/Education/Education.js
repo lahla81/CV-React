@@ -5,6 +5,7 @@ import {EducationArray} from './EducationArray';
 import SecHeaders from '../SecHeaders/SecHeaders';
 
 function Education({onRouteChange}) {
+  console.log('Education');
   return (
     <section id="education">
       <SecHeaders name={'EDUCATION'}/>

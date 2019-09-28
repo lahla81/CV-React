@@ -6,6 +6,7 @@ import {CertificateArray} from './CertificateArray';
 import SecHeaders from '../SecHeaders/SecHeaders';
 
 function Certificates({onRouteChange}) {
+    console.log('Certificates')
   return (
     <section id="certificates">
         <SecHeaders name={'CERTIFICATES'}/>

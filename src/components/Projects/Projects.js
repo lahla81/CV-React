@@ -31,7 +31,6 @@ class Projects extends Component {
   }
 
   render(){
-    console.log('Projects')
     const { category , onProjectsChange } = this.props;
     const filteredProjects = this.state.projects.filter(project => {
       return project.category.includes(category)
